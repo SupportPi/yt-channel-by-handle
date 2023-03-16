@@ -17,7 +17,7 @@ async function get_id_of(handle){
     return closin.substring(closin.indexOf(search_str) +  search_str_len , closin.length - 2)
 }
 async function run(){
-    app.get('/', async (req, res)=>{
+    app.get('*', async (req, res)=>{
         if(!req.query.handle){
             res.json({
                 success: false,
