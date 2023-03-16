@@ -18,6 +18,12 @@ async function get_id_of(handle){
 }
 async function run(){
     app.get('/', async (req, res)=>{
+        if(!req.query.handle){
+            res.json({
+                success: false,
+                id: null
+            });
+        } else {
         req.query.handle = req.query.handle.replaceAll(`"`, ""); // Filters out " from handle param
         let id = null;
         try {
@@ -33,6 +39,7 @@ async function run(){
                 success: !!id, 
              });
         }
+    }
     });
     app.listen(process.env.PORT, async () => {
         console.info("Running on Port:".yellow, process.env.PORT.toString().green);
