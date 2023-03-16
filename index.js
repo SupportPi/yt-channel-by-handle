@@ -1,7 +1,10 @@
-require("dotenv").config();
-require("colors");
-const fetch = require("node-fetch").fetch;
-const app = require("express")();
+import dotenv from 'dotenv';
+import colors from 'colors';
+import fetch from 'node-fetch';
+import express from 'express';
+dotenv.config();
+colors.enable();
+const app = express();
 const search_str = `<meta itemprop="channelId" content="`;
 const search_str_len = search_str.length;
 async function get_id_of(handle){

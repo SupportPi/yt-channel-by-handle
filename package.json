@@ -2,7 +2,7 @@
   "name": "channel_by_handle",
   "version": "1.0.0",
   "description": "Run on Separate Machine - Breaks TOS",
-  "type": "commonjs",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
