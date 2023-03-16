@@ -14,7 +14,7 @@ async function get_id_of(handle){
 }
 async function run(){
     app.get('/', async (req, res)=>{
-        req.query.handle = req.query.handle.replaceAll(`"`, ""); // Filters out from param ""
+        req.query.handle = req.query.handle.replaceAll(`"`, ""); // Filters out " from handle param
         let id = null;
         try {
             id = await get_id_of(req.query.handle);
@@ -30,7 +30,7 @@ async function run(){
              });
         }
     });
-    app.listen(process.env.PORT, () => {
+    app.listen(process.env.PORT, async () => {
         console.info("Running on Port:".yellow, process.env.PORT.toString().green);
     });
 }
