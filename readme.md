@@ -16,3 +16,10 @@ handle param accepts handles in the following formats:
 -  "handle"
 -  @handle
 -  "@handle"
+
+# Huh
+Turns out an Open Source solution already exists.
+
+https://yt.lemnoslife.com/channels?handle=@doctorlolime
+
+Probably best to just use this, rather than breaking Google's rules yourself.
